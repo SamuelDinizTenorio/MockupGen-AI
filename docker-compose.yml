@@ -1,0 +1,14 @@
+services:
+  mockupgen-ai:
+    build:
+      context: . # O contexto do build é a raiz do projeto
+      dockerfile: docker/Dockerfile # Caminho para o Dockerfile
+    mem_limit: 4g # Limita o uso de memória para 4GB. Ajuste conforme necessário.
+    ports:
+      - "80:80"
+    container_name: mockupgen-ai
+    restart: unless-stopped # Garante que o contêiner reinicie a menos que seja parado manualmente.
+    environment:
+      # Passa a chave da API como uma variável de ambiente em tempo de execução.
+      # O Docker Compose carrega automaticamente as variáveis de um arquivo .env na raiz do projeto.
+      GEMINI_API_KEY: ${GEMINI_API_KEY}

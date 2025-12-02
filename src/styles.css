@@ -1,0 +1,61 @@
+/*
+ * @file Arquivo de Estilos Globais da Aplicação
+ *
+ * Este arquivo contém os estilos CSS globais para a aplicação,
+ * incluindo a importação de fontes, estilos de corpo e personalização
+ * da barra de rolagem.
+ */
+
+/*
+ * Importação da fonte 'Inter' do Google Fonts.
+ * Esta fonte é utilizada em toda a aplicação para garantir uma tipografia consistente.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/*
+ * Estilo base para o corpo do documento.
+ * Define a família da fonte padrão para 'Inter' e suas alternativas sans-serif.
+ */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/*
+ * Personalização da barra de rolagem para uma estética aprimorada.
+ * Define a largura e a altura da barra de rolagem.
+ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Estilo da trilha da barra de rolagem (fundo). */
+::-webkit-scrollbar-track {
+  background: #f1f5f9; 
+}
+
+/* Estilo da trilha da barra de rolagem no modo escuro. */
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+/* Estilo do "polegar" (thumb) da barra de rolagem. */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 4px;
+}
+
+/* Estilo do "polegar" da barra de rolagem no modo escuro. */
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Estilo do "polegar" da barra de rolagem ao passar o mouse. */
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+/* Estilo do "polegar" da barra de rolagem ao passar o mouse no modo escuro. */
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
